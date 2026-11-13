@@ -4,7 +4,7 @@
 
 - [x] Step 00 — Preparar AGENTS.md y el registro de progreso — `3326c70` · 2026-11-12 21:33 -05
 - [x] Step 01 — Crear el proyecto con Vite y levantarlo — `b42548d` · 2026-11-12 21:45 -05
-- [ ] Step 02 — Limpiar el andamiaje de la plantilla
+- [x] Step 02 — Limpiar el andamiaje de la plantilla — `d8a9b0c` · 2026-11-12 21:55 -05
 - [ ] Step 03 — Organizar `src/` y crear la arquitectura de CSS
 - [ ] Step 04 — Archivo de datos de la cartelera y pósters
 - [ ] Step 05 — Componente Header
@@ -31,6 +31,7 @@
 - El repositorio estaba vacío salvo un README inicial; no se encontró una app que mantener.
 - Paso 01 verificado localmente: Node.js `v24.19.0`; Vite `8.3.8`; `npm run dev` respondió HTTP 200 en `localhost:5173`; lint y build del scaffold sin errores.
 - Paso 02 verificado localmente: `index.html` responde HTTP 200 con `lang="es"` y título Aurora Cinemas; `App.jsx` muestra el `h1` mínimo; plantilla y referencias rotas eliminadas; lint y build pasan. Se instalaron Fraunces e Instrument Sans para la arquitectura visual del paso 3.
+- Paso 03 verificado localmente: arquitectura tokens/base/layout/utilities importada en orden, fuentes variables aplicadas, fondo ink-950 y anillo de foco ámbar; lint y build pasan y la pantalla mínima se ve en el navegador.
 - `npm run lint`: sin errores. `npm run build`: Vite 8.3.8 compiló correctamente. `npm test`: 2 archivos y 2 pruebas aprobados.
 - `npm run dev`: Vite informó que inició en `http://127.0.0.1:5173/` en 199 ms; no se pudo validar la respuesta HTTP desde el navegador integrado o PowerShell por restricciones de acceso local.
 - Errores JSX reproducidos y corregidos en una copia temporal; `src/App.jsx` quedó restaurado:
