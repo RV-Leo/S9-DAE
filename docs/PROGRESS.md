@@ -2,40 +2,32 @@
 
 ## Pasos
 
-- [x] Step 00 — Preparar AGENTS.md y el registro de progreso — `3326c70` · 2026-11-12 21:33 -05
-- [x] Step 01 — Crear el proyecto con Vite y levantarlo — `b42548d` · 2026-11-12 21:45 -05
-- [x] Step 02 — Limpiar el andamiaje de la plantilla — `d8a9b0c` · 2026-11-12 21:55 -05
-- [x] Step 03 — Organizar `src/` y crear la arquitectura de CSS — `a5328bb` · 2026-11-12 22:00 -05
-- [ ] Step 04 — Archivo de datos de la cartelera y pósters
-- [ ] Step 05 — Componente Header
-- [ ] Step 06 — Componente Footer
-- [ ] Step 07 — Componente Hero con props
-- [ ] Step 08 — Componente MovieCard
-- [ ] Step 09 — Componente MovieList
-- [ ] Step 10 — Componer todo en App.jsx
-- [ ] Step 11 — Registrar tres errores típicos de JSX
-- [ ] Step 12 — Cierre: README y publicación
+- [x] Step 00 — AGENTS.md y registro — `3326c70` · 2026-11-12 21:33 -05
+- [x] Step 01 — Scaffold Vite — `b42548d` · 2026-11-12 21:45 -05
+- [x] Step 02 — Limpieza de plantilla — `d8a9b0c` · 2026-11-12 21:55 -05
+- [x] Step 03 — Arquitectura CSS — `a5328bb` · 2026-11-12 22:00 -05
+- [x] Step 04 — Datos y pósters — `0be5b05` · 2026-11-12 22:06 -05
+- [x] Step 05 — Header — verificado; hash y hora se anotan en el siguiente paso
+- [ ] Step 06 — Footer
+- [ ] Step 07 — Hero con props
+- [ ] Step 08 — MovieCard
+- [ ] Step 09 — MovieList
+- [ ] Step 10 — Composición de App
+- [ ] Step 11 — Errores JSX
+- [ ] Step 12 — README y cierre
 
 ## Decisiones
 
-- Se trabaja desde cero en `cinema-app/`, como indica el brief; no hay aplicación previa que reutilizar.
-- Se respetará la petición del alumno: no ejecutar `git push` sin mostrar el avance y recibir confirmación.
-- Las verificaciones locales se ejecutaron sin crear aún commits: el sandbox permite editar el proyecto, pero denegó escritura en `.git/index` al intentar el commit del paso 0. Los pasos se mantienen sin marcar hasta que tengan su hash.
-- La revisión a 390 px y 1440 px queda pendiente: el navegador integrado no pudo alcanzar `127.0.0.1:5173` y la petición local desde PowerShell fue rechazada por permisos de socket.
+- Se parte desde cero en `cinema-app/`; Node.js `v24.19.0`, npm `11.17.0`, Vite `8.3.8`.
+- Se conservarán commits separados por etapa y se hará un push general al finalizar, según la instrucción del alumno.
+- No se incluyen capturas ni entregables del campus; esos los prepara el alumno.
 
 ## Hallazgos
 
-- Node.js: `v24.19.0`; npm: `11.17.0`.
-- Rama actual: `main`; remoto `origin` configurado como `https://github.com/RV-Leo/S9-DAE.git`.
-- La guía del curso confirma los 12 pasos del brief, la cartelera Aurora Cinemas y los tres criterios técnicos (Vite, componentes, props). El documento también pide una evidencia para el campus; el brief delimita expresamente que esa evidencia la redacta el alumno.
-- El repositorio estaba vacío salvo un README inicial; no se encontró una app que mantener.
-- Paso 01 verificado localmente: Node.js `v24.19.0`; Vite `8.3.8`; `npm run dev` respondió HTTP 200 en `localhost:5173`; lint y build del scaffold sin errores.
-- Paso 02 verificado localmente: `index.html` responde HTTP 200 con `lang="es"` y título Aurora Cinemas; `App.jsx` muestra el `h1` mínimo; plantilla y referencias rotas eliminadas; lint y build pasan. Se instalaron Fraunces e Instrument Sans para la arquitectura visual del paso 3.
-- Paso 03 verificado localmente: arquitectura tokens/base/layout/utilities importada en orden, fuentes variables aplicadas, fondo ink-950 y anillo de foco ámbar; lint y build pasan y la pantalla mínima se ve en el navegador.
-- Paso 04 verificado localmente: 8 películas con ids únicos, campos completos, valoraciones dentro de 0–10 y exactamente una destacada; 8 pósters SVG locales; `npm test` (1 prueba), lint y build pasan.
-- `npm run lint`: sin errores. `npm run build`: Vite 8.3.8 compiló correctamente. `npm test`: 2 archivos y 2 pruebas aprobados.
-- `npm run dev`: Vite informó que inició en `http://127.0.0.1:5173/` en 199 ms; no se pudo validar la respuesta HTTP desde el navegador integrado o PowerShell por restricciones de acceso local.
-- Errores JSX reproducidos y corregidos en una copia temporal; `src/App.jsx` quedó restaurado:
-  1. `class` en JSX: `Invalid DOM property \`class\`. Did you mean \`className\`?` Causa: React usa `className` para clases; corrección: sustituir el atributo.
-  2. Dos nodos JSX raíz: `Adjacent JSX elements must be wrapped in an enclosing tag.` Causa: el componente devuelve hermanos sin contenedor; corrección: envolverlos en un elemento o fragmento `<>...</>`.
-  3. `map` sin clave: `Each child in a list should have a unique "key" prop.` Causa: React no puede identificar cada elemento de la lista; corrección: usar una clave estable como `key={movie.id}`.
+- La guía confirma los 12 pasos, React con componentes PascalCase y una carpeta por componente; el brief pide películas ficticias y SVG originales.
+- Paso 01: servidor Vite respondió HTTP 200; lint y build pasan.
+- Paso 02: `lang="es"`, meta description, favicon original y pantalla mínima; lint y build pasan.
+- Paso 03: tokens/base/layout/utilities en orden, Fraunces e Instrument Sans, fondo oscuro y anillo de foco ámbar.
+- Paso 04: ocho películas con ids únicos, campos completos, rating 0–10 y una destacada; ocho SVG válidos y prueba de datos aprobada.
+- Paso 05: Header sticky con tres anclas; manualmente visto en el navegador a ~599 px y navegación con Tab verificada. Las capturas Playwright exactas a 390 y 1440 px no se pudieron ejecutar: el control de aprobación rechazó la petición. No se guardaron capturas.
+- Lint, build y 4 pruebas pasan en la implementación actual.
