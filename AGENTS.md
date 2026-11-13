@@ -51,7 +51,7 @@ flowchart TD
     MovieList -->|"movie + key (props)"| MovieCard
 ```
 
-## Árbol objetivo
+## Árbol real del proyecto
 
 ```text
 S9-DAE/
@@ -67,8 +67,9 @@ S9-DAE/
         ├── test/setup.js
         ├── styles/ (tokens · base · layout · utilities)
         └── components/
-            ├── Header/ · Footer/ · Hero/
-            └── MovieCard/ · MovieList/ (MovieList.test.jsx)
+            ├── Header/ · Footer/
+            ├── Hero/ (Hero.test.jsx)
+            └── MovieCard/ (MovieCard.test.jsx) · MovieList/ (MovieList.test.jsx)
 ```
 
 ## Comandos

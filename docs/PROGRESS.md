@@ -13,8 +13,8 @@
 - [x] Step 08 — MovieCard — `fb36d57` · 2026-11-12 23:13 -05
 - [x] Step 09 — MovieList — `539f651` · 2026-11-12 23:19 -05
 - [x] Step 10 — Composición de App — `5e34af1` · 2026-11-12 23:23 -05
-- [x] Step 11 — Errores JSX — verificados; hash y hora se anotan en el siguiente paso
-- [ ] Step 12 — README y cierre
+- [x] Step 11 — Errores JSX — `6a88b40` · 2026-11-12 23:24 -05
+- [x] Step 12 — README y cierre — verificado; commit registrado en el reporte final
 
 ## Decisiones
 
@@ -39,4 +39,6 @@
   1. `class`: `Invalid DOM property \`class\`. Did you mean \`className\`?` Causa: JSX React debe usar `className`; corrección: cambiar el atributo.
   2. Dos raíces: `Adjacent JSX elements must be wrapped in an enclosing tag.` Causa: un componente retorna dos hermanos; corrección: envolver en elemento o fragmento `<>...</>`.
   3. `map` sin key: `Each child in a list should have a unique "key" prop.` Causa: elementos no identificados; corrección: `key={movie.id}`.
+- Paso 12: README de instalación y ejecución, versiones React/Vite/Vitest, árbol final en AGENTS.md y dependencias declaradas en package.json.
+- Verificación final: lint, build y 4/4 pruebas pasan. La página completa se revisó visualmente en navegador a ~599 px; el entorno no permitió tomar capturas Playwright exactas de 390/1440 px.
 - Lint, build y 4 pruebas pasan en la implementación actual.
