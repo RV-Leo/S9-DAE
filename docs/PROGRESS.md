@@ -11,8 +11,8 @@
 - [x] Step 06 — Footer — `0ebd9ad` · 2026-11-12 22:44 -05
 - [x] Step 07 — Hero con props — `c1a8209` · 2026-11-12 23:07 -05
 - [x] Step 08 — MovieCard — `fb36d57` · 2026-11-12 23:13 -05
-- [ ] Step 09 — MovieList
-- [ ] Step 10 — Composición de App
+- [x] Step 09 — MovieList — `539f651` · 2026-11-12 23:19 -05
+- [x] Step 10 — Composición de App — verificado; hash y hora se anotan en el siguiente paso
 - [ ] Step 11 — Errores JSX
 - [ ] Step 12 — README y cierre
 
@@ -34,4 +34,5 @@
 - Paso 07: Hero recibe la película destacada por `movie`; prueba confirma que cambia el h1 al recibir una película distinta. Lint, build y pruebas pasan.
 - Paso 08: MovieCard usa solo poster, title, rating y showtimes; la prueba aislada con props mínimos pasa. Chips horarios con muescas tipo ticket.
 - Paso 09: MovieList recibe `movies`, dibuja una tarjeta por elemento con `key={movie.id}` y pasa la prueba de 3 elementos.
+- Paso 10: App compone Header, Hero, MovieList y Footer; navegador muestra ocho tarjetas y la película destacada.
 - Lint, build y 4 pruebas pasan en la implementación actual.
