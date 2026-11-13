@@ -9,7 +9,7 @@
 - [x] Step 04 — Datos y pósters — `0be5b05` · 2026-11-12 22:06 -05
 - [x] Step 05 — Header — `a3859bc` · 2026-11-12 22:24 -05
 - [x] Step 06 — Footer — `0ebd9ad` · 2026-11-12 22:44 -05
-- [ ] Step 07 — Hero con props
+- [x] Step 07 — Hero con props — `c1a8209` · 2026-11-12 23:07 -05
 - [ ] Step 08 — MovieCard
 - [ ] Step 09 — MovieList
 - [ ] Step 10 — Composición de App
@@ -32,4 +32,5 @@
 - Paso 05: Header sticky con tres anclas; manualmente visto en el navegador a ~599 px y navegación con Tab verificada. Las capturas Playwright exactas a 390 y 1440 px no se pudieron ejecutar: el control de aprobación rechazó la petición. No se guardaron capturas.
 - Paso 06: Footer con contacto ficticio, horario, políticas, derechos y tira de película; landmarks y enlaces de contacto revisados. Lint, build y pruebas pasan.
 - Paso 07: Hero recibe la película destacada por `movie`; prueba confirma que cambia el h1 al recibir una película distinta. Lint, build y pruebas pasan.
+- Paso 08: MovieCard usa solo poster, title, rating y showtimes; la prueba aislada con props mínimos pasa. Chips horarios con muescas tipo ticket.
 - Lint, build y 4 pruebas pasan en la implementación actual.
