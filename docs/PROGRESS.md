@@ -12,8 +12,8 @@
 - [x] Step 07 — Hero con props — `c1a8209` · 2026-11-12 23:07 -05
 - [x] Step 08 — MovieCard — `fb36d57` · 2026-11-12 23:13 -05
 - [x] Step 09 — MovieList — `539f651` · 2026-11-12 23:19 -05
-- [x] Step 10 — Composición de App — verificado; hash y hora se anotan en el siguiente paso
-- [ ] Step 11 — Errores JSX
+- [x] Step 10 — Composición de App — `5e34af1` · 2026-11-12 23:23 -05
+- [x] Step 11 — Errores JSX — verificados; hash y hora se anotan en el siguiente paso
 - [ ] Step 12 — README y cierre
 
 ## Decisiones
@@ -35,4 +35,8 @@
 - Paso 08: MovieCard usa solo poster, title, rating y showtimes; la prueba aislada con props mínimos pasa. Chips horarios con muescas tipo ticket.
 - Paso 09: MovieList recibe `movies`, dibuja una tarjeta por elemento con `key={movie.id}` y pasa la prueba de 3 elementos.
 - Paso 10: App compone Header, Hero, MovieList y Footer; navegador muestra ocho tarjetas y la película destacada.
+- Paso 11, errores reproducidos temporalmente y código restaurado:
+  1. `class`: `Invalid DOM property \`class\`. Did you mean \`className\`?` Causa: JSX React debe usar `className`; corrección: cambiar el atributo.
+  2. Dos raíces: `Adjacent JSX elements must be wrapped in an enclosing tag.` Causa: un componente retorna dos hermanos; corrección: envolver en elemento o fragmento `<>...</>`.
+  3. `map` sin key: `Each child in a list should have a unique "key" prop.` Causa: elementos no identificados; corrección: `key={movie.id}`.
 - Lint, build y 4 pruebas pasan en la implementación actual.
