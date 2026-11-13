@@ -28,6 +28,7 @@
 - Rama actual: `main`; remoto `origin` configurado como `https://github.com/RV-Leo/S9-DAE.git`.
 - La guía del curso confirma los 12 pasos del brief, la cartelera Aurora Cinemas y los tres criterios técnicos (Vite, componentes, props). El documento también pide una evidencia para el campus; el brief delimita expresamente que esa evidencia la redacta el alumno.
 - El repositorio estaba vacío salvo un README inicial; no se encontró una app que mantener.
+- Paso 01 verificado localmente: Node.js `v24.19.0`; Vite `8.3.8`; `npm run dev` respondió HTTP 200 en `localhost:5173`; lint y build del scaffold sin errores.
 - `npm run lint`: sin errores. `npm run build`: Vite 8.3.8 compiló correctamente. `npm test`: 2 archivos y 2 pruebas aprobados.
 - `npm run dev`: Vite informó que inició en `http://127.0.0.1:5173/` en 199 ms; no se pudo validar la respuesta HTTP desde el navegador integrado o PowerShell por restricciones de acceso local.
 - Errores JSX reproducidos y corregidos en una copia temporal; `src/App.jsx` quedó restaurado:

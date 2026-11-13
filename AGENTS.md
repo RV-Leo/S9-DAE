@@ -51,7 +51,7 @@ flowchart TD
     MovieList -->|"movie + key (props)"| MovieCard
 ```
 
-## Árbol actual
+## Árbol objetivo
 
 ```text
 S9-DAE/
